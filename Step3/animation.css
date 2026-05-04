@@ -1,0 +1,31 @@
+/* fadeIn animation 정의하기*/
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes shake {
+    0%, 100% {transform: translateX(0);}
+    25% {transform: translateX(-6px);}
+    50% {transform: translateX(6px);}
+    75% {transform: translateX(-6px);}
+}
+/* ===============================*/
+
+/* 박스에 적용하기 */
+.box{
+    animation-name: fadeIn, shake;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+.box:nth-child(2){
+    animation-delay: 0.5s;
+}
+.box:nth-child(3){
+    animation-delay: 1s;
+}
+.box:nth-child(4){
+    animation-delay: 1.5s;
+}
+/* ===============================*/
